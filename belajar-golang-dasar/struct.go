@@ -7,6 +7,10 @@ type Customer struct {
 	Age           int
 }
 
+func (customer Customer) sayHello(name string) {
+	fmt.Println("Hello", name, "my name is", customer.Name)
+}
+
 func main() {
 	var eko Customer
 
@@ -22,4 +26,6 @@ func main() {
 	}
 
 	fmt.Println(budi)
+
+	budi.sayHello("John")
 }
