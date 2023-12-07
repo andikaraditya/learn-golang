@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+type Customer struct {
+	Name, Address string
+	Age           int
+}
+
+func main() {
+	var eko Customer
+
+	eko.Name = "Eko"
+	eko.Address = "Indonesia"
+	eko.Age = 20
+	fmt.Println(eko)
+
+	budi := Customer{
+		Name:    "Budi",
+		Address: "Indonesia",
+		Age:     25,
+	}
+
+	fmt.Println(budi)
+}
