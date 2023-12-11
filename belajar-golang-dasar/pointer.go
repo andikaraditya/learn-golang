@@ -6,6 +6,18 @@ type Address struct {
 	City, Province, Country string
 }
 
+func changeCountryToIndonesia(address *Address) {
+	address.Country = "Indonesia"
+}
+
+type Man struct {
+	Name string
+}
+
+func (man *Man) married() {
+	man.Name = "Mr." + man.Name
+}
+
 func main() {
 	address1 := Address{"Jogja", "DIY", "Indonesia"}
 
@@ -38,4 +50,17 @@ func main() {
 	address5.City = "Surabaya"
 	fmt.Println(address4)
 	fmt.Println(address5)
+
+	// change pointer inside function
+	address6 := &Address{"New York City", "New York", "USA"}
+
+	changeCountryToIndonesia(address6)
+
+	fmt.Println(address6)
+
+	john := Man{"John"}
+
+	john.married()
+
+	fmt.Println(john)
 }
